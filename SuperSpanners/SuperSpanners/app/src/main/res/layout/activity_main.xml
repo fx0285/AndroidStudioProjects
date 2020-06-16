@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#ffd700"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Welcome to USA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="Lane"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="Sign"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Queue"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:onClick="startRepeatedTimerTask"
+                    android:id="@+id/lane1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffff"
+                    android:paddingLeft="5dp"
+                    android:text="CLOSED"
+                    android:textColor="#E60909"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/queue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:background="#a4c639"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/lane2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffff"
+                    android:paddingLeft="5dp"
+                    android:text="CLOSED"
+                    android:textColor="#E60909"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/queue2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:background="#a4c639"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/lane3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffff"
+                    android:paddingLeft="5dp"
+                    android:text="CLOSED"
+                    android:textColor="#E60909"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/queue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:background="#a4c639"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/lane4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffff"
+                    android:paddingLeft="5dp"
+                    android:text="CLOSED"
+                    android:textColor="#E60909"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/queue4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:background="#a4c639"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:paddingLeft="5dp"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/lane5"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffff"
+                    android:paddingLeft="5dp"
+                    android:text="CLOSED"
+                    android:textColor="#E60909"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/queue5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".30"
+                    android:background="#a4c639"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="4dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:background="#ff7f50"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+
+            <Button
+                android:id="@+id/start"
+                android:onClick="startRepeatedTimerTask"
+                android:layout_width="177dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="13dp"
+                android:background="#696969"
+                android:text="Start Sim"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/stop"
+                android:onClick="stopTimerTask"
+                android:layout_width="177dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="13dp"
+                android:background="#696969"
+
+                android:text="Stop Sim"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/reset"
+                android:onClick="reset"
+                android:layout_width="177dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="13dp"
+                android:background="#696969"
+
+                android:text="Reset"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".50"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:text="Cars from Canada per minute:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/carseek"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".40"
+                android:background="#000000"
+                android:max="12" />
+
+            <TextView
+                android:id="@+id/carscount"
+                android:layout_width="0dp"
+                android:textColor="@android:color/white"
+                android:layout_height="40dp"
+                android:layout_weight=".1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".50"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:text="Trucks from Canada per minute:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/truckseek"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".40"
+                android:background="#000000"
+                android:max="5" />
+
+            <TextView
+                android:id="@+id/truckscount"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".1"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
